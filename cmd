@@ -1,4 +1,4 @@
-touch  name.type   // create ne file  
+touch  name.type   // create new file  
 
 chmod  cmd   file  // change permission of the file r/w  
 use 755 open for all 
@@ -28,9 +28,9 @@ or #!/bin/bash  use one of them first ligne only
 var :
 VAR_NAME= .... §§§§ therse no space allowed here else ererr ex FIRST_NAme=Oussama
 
-PS : if we have Name= Amara Oussama 
-in the output we will have only Amara "whit space inter as end ligne"
-so it be NAME ="Amara Oussama"
+PS : if we have Name= Amara Oussama -->> after  space will see it as an unknowin cmd 
+in the output we will have only Amara "whit space interpreted  as end ligne"
+so it be NAME ="Amara Oussama" /--> to make it  as single string 
 
 echo $VAR_NAME     to print var
 
@@ -38,7 +38,7 @@ echo $VAR_NAME     to print var
 $0 : the name of the script the path is included
 $1 ...$100 : first param ... 100 params 
 exmp: script echo hi $1
-      shell : ./params.sh ousamma  ; so  oussamma is  $1 or  first params
+      shell : ./params.sh ousama  ; so  oussama is  $1 or  first params
 
 PS : echo $? :what is the last exit code 
 ********
@@ -77,17 +77,16 @@ NAME=$@  //CREATE ARRAY OF NAME  exempla  shell :: ./ x.sh Oussama Aymen Malek
 for name in $NAMES 
 do 
 ...
-don
+done
 
 break :: exit lop
 continue ::pass instruction
 
-*** env vars :
+*** env vars :Expemple not all of them
 $PATH
 $TERM  : terminal
 $EDITOR 
-if [ -z ....]
-  check for empty string
+if [ -z ....] :check for empty string
 ***/ function 
 1 style
 
@@ -95,7 +94,9 @@ function name (para)
 { 
 instruction
 }
+
 2style
+
 name(para)
 {
 instruction
@@ -103,8 +104,11 @@ instruction
 
 to call name
 exmple
+
 hello()
-{echo hello}
+{
+echo hello
+}
 echo "calling hello function"
 hello
 
@@ -112,8 +116,11 @@ para
 local name = ... for local var
 
 hello()
-{local NAME=$1
- echo "hello $NAME"}
+{
+local NAME=$1
+echo "hello $NAME"
+}
+
 echo "calling hello function"
 hello Oussama
 
